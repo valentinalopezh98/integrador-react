@@ -140,7 +140,7 @@ export const productsData = [
         rating: 7,
         price: 29990,
         category:"1980",
-        img: "https://static.wikia.nocookie.net/queen/images/9/9a/R-373176-1408006503-7978.jpeg.jpg/revision/latest?cb=20180805115701&path-prefix=es",
+        img: "https://upload.wikimedia.org/wikipedia/en/3/3c/Queen_Hot_Space.png",
     },
     {
         id: 14,

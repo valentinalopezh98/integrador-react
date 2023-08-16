@@ -13,6 +13,7 @@ export const StyledButton = styled(motion.button)`
     font-size: 0.875rem;
     position: relative;
     cursor: pointer;
+    transition: all 0.3s ease-in;
 
     &:hover{
         background-color:${props => props.color? "var(--font-color)" : "var(--bg-color)"};

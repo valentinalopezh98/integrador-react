@@ -16,9 +16,8 @@ export const NavbarContainerStyled = styled.header`
 
     & div a img{
                 width: 100px;
-            }
+    }
 
-    
     @media (max-width: 768px){
         padding: 1rem 2rem;
     }
@@ -62,4 +61,18 @@ export const MenuContainerStyled = styled.div`
     @media (max-width: 1024px){
         display: flex;
     }
+`
+
+export const OverlayStyled = styled.div`  
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1; 
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0.5rem 2rem 0 rgba(1, 2, 5, 0.37);
+    backdrop-filter: blur(0.3125rem);
+    -webkit-backdrop-filter: blur(0.3125rem);
+    display:  ${props => props.showmenu ? "flex" : "none"};
 `

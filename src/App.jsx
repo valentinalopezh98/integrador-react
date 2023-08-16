@@ -1,27 +1,25 @@
 import Navbar from "./components/Navbar/Navbar"
 import Layout from "./components/Layout/Layout"
-import Hero from "./components/Hero/Hero"
-import SocialContainer from "./components/SocialContainer/SocialContainer"
-import { AboutUs } from "./components/AboutUs/AboutUs"
-import Featured from "./components/Featured/Featured"
 import Footer from "./components/Footer/Footer"
+import { Conocenos } from "./components/Conocenos/Conocenos"
+import AboutUs from "./pages/AboutUs/AboutUs"
+import Contact from "./pages/Contact/Contact"
+import { NotFound } from "./pages/NotFound/NotFound"
+import { Menu } from "./components/Menu/Menu"
+import {Home} from "./pages/Home/Home"
 
 function App() {
 
   return (
     <>
-      <Navbar/>
+    <Navbar/>
+    
+    <Layout>
+      <Home/>
+    </Layout>    
 
-      <Layout>
-          <Hero/>
-          <SocialContainer/>
-          <AboutUs/>
-          <Featured/>
-      </Layout>
-      
-      <Footer/>
+    <Footer/>
     </>
-
   )
 }
 

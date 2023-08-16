@@ -4,6 +4,8 @@ export const GlobalStyles = createGlobalStyle`
 :root{
     --primary-color: #00c1d1;
     --bg-color: #1a1b1f;
+    --bg-secondary: #313235;
+    --bg-hover: #48494c;
     --font-color: white;
     --font-grey: #959595;
     --secondary-color: #e5587d;
