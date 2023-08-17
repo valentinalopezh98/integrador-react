@@ -8,6 +8,7 @@ import NavbarLinks from "../UI/NavbarLinks/NavbarLinks"
 import { Menu } from '../Menu/Menu';
 import {useContext} from 'react'
 import { Contexto } from '../../context/context'
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -18,9 +19,9 @@ const Navbar = () => {
     <NavbarContainerStyled>
 
       <div>
-        <a href="#">
+        <Link to='/'>
           <img src={logoblanco} alt="logo" />
-        </a>
+        </Link>
       </div>
 
       <LinksContainerStyled>

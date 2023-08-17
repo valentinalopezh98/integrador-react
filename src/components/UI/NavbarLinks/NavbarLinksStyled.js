@@ -19,6 +19,10 @@ export const NavbarLinksStyled = styled.nav`
         color: var(--primary-color);
     }
 
+    & ul li a.active{
+        color: var(--primary-color);
+    }
+
     @media (max-width: 1024px){
         display: none;
     }

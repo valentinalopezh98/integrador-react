@@ -2,6 +2,7 @@ import React from 'react'
 import { AboutUsBackgroundContainerStyled, AboutUsTextContainerStyled } from './AboutUsStyles'
 import {Title} from "../UI/Title/Title"
 import {Button} from '../UI/Button/Button'
+import { Link } from 'react-router-dom'
 
 export const AboutUs = () => {
   return (
@@ -19,7 +20,7 @@ export const AboutUs = () => {
 
         </AboutUsTextContainerStyled>
 
-        <Button color={false}>Ver más!</Button>
+        <Link to='nosotros'><Button color={false}>Ver más!</Button></Link>
     </AboutUsBackgroundContainerStyled>
   )
 }

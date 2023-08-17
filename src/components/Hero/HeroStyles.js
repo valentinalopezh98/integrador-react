@@ -20,6 +20,16 @@ export const HeroLeftStyled = styled.div`
             transform: translateX(0);
         }
     }
+
+    @keyframes slide-up{
+        from  {
+            transform: translateY(6.25rem);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }  
+
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -48,6 +58,7 @@ export const HeroLeftStyled = styled.div`
     @media (max-width: 1024px){
         width: 100%;
         align-items: center;
+        animation: fade 1s ease-in, slide-up 1s ease-in;
 
         & h1{
             text-align: center;

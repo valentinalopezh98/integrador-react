@@ -15,8 +15,17 @@ export const StyledButton = styled(motion.button)`
     cursor: pointer;
     transition: all 0.3s ease-in;
 
+    & a{
+        color:${props => props.color? "var(--font-color)" : "var(--bg-color)"};
+    }
+
     &:hover{
         background-color:${props => props.color? "var(--font-color)" : "var(--bg-color)"};
+        color: ${props => props.color? "var(--bg-color)" : "var(--font-color)"};;
+        transition: all 0.3s ease-in;
+    }
+
+    &:hover a{
         color: ${props => props.color? "var(--bg-color)" : "var(--font-color)"};;
         transition: all 0.3s ease-in;
     }

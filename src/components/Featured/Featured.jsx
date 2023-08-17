@@ -4,6 +4,7 @@ import Title from '../UI/Title/Title'
 import {featuredProductsData} from "../../data/featured"
 import ProductCard from '../UI/ProductCard/ProductCard'
 import Button from "../UI/Button/Button"
+import { Link } from 'react-router-dom'
 
 const Featured = () => {
   return (
@@ -16,7 +17,9 @@ const Featured = () => {
             })
           }
         </FeaturedContainerStyled>
-        <Button>Ver más</Button>
+        <Link to='productos'>
+          <Button>Ver más</Button>
+        </Link>
     </FeaturedStyled>
   )
 }
