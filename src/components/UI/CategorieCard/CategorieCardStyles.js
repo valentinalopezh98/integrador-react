@@ -7,12 +7,12 @@ export const CategorieCardStyled = styled.div`
     flex-direction: column;
     min-width: 85px;
     gap: 10px;
-    background-color: var(--bg-secondary);
+    background-color: ${props => props.selected ? "var(--primary-color)" : "var(--bg-secondary)"};
     padding: 20px;
     border-radius: 12px;
 
     &:hover{
-        background-color: var(--bg-hover);
+        background-color: ${props => props.selected ? "var(--primary-color)" : "var(--bg-hover)"};
         transform: scale(0.99);
         transition: all 0.1s ease-in;
         cursor: pointer;

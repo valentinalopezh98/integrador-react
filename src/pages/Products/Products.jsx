@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Categories from '../../components/Categories/Categories'
 import ProductsList from '../../components/ProductsList/ProductsList'
-import Button from '../../components/UI/Button/Button'
+import { useSelector } from 'react-redux'
+
+
 
 const Products = () => {
+
   return (
     <>
         <Categories/>
         <ProductsList/>
-        <Button>Ver más</Button>
     </>
   )
 }

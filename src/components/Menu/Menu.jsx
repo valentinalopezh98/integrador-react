@@ -5,7 +5,7 @@ import { Contexto } from '../../context/context'
 
 export const Menu = () => {
 
-    const {contextState, toggleMenu} = useContext(Contexto);
+    const {contextState} = useContext(Contexto);
 
     return (
         <MenuWrapperStyled showmenu={contextState.showMenu}>

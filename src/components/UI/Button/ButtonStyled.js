@@ -4,7 +4,7 @@ import {color, motion} from "framer-motion"
 export const StyledButton = styled(motion.button)`
     background-color:${props => props.color? "var(--bg-color)" : "var(--font-color)"};
     border: 0.125rem solid white;
-    display: flex;
+    display: ${props => props.disabled? "none" : "flex"};
     align-items: center;
     justify-content: center;
     padding: 0.625rem 3.125rem;
@@ -20,8 +20,8 @@ export const StyledButton = styled(motion.button)`
     }
 
     &:hover{
-        background-color:${props => props.color? "var(--font-color)" : "var(--bg-color)"};
-        color: ${props => props.color? "var(--bg-color)" : "var(--font-color)"};;
+        background-color:${props => props.color ? "var(--font-color)" : "var(--bg-color)"};
+        color: ${props => props.color? "var(--bg-color)" : "var(--font-color)"};
         transition: all 0.3s ease-in;
     }
 

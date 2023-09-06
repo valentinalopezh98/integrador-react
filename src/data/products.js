@@ -307,4 +307,6 @@ export const productsData = [
         category:"1980",
         img: "https://upload.wikimedia.org/wikipedia/en/e/e6/GC_Fire_of_Love.jpg",
     }
-]
+];
+
+export const totalProducts = productsData.length;

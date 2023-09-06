@@ -29,6 +29,14 @@ export const LinksContainerStyled = styled.div`
     align-items: center;
     justify-content: space-between;
 `
+
+export const CartIconContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 25px;
+`
 export const LoginContainerStyled = styled.div`
         display: flex;
         align-items: center;
@@ -74,5 +82,5 @@ export const OverlayStyled = styled.div`
     box-shadow: 0 0.5rem 2rem 0 rgba(1, 2, 5, 0.37);
     backdrop-filter: blur(0.3125rem);
     -webkit-backdrop-filter: blur(0.3125rem);
-    display:  ${props => props.showmenu ? "flex" : "none"};
+    display:  ${props => (props.showmenu || props.showCart) ? "flex" : "none"};
 `
