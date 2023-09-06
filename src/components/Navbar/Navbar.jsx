@@ -1,5 +1,5 @@
 import React from 'react'
-import { LinksContainerStyled, NavbarContainerStyled, LoginContainerStyled, MenuContainerStyled, OverlayStyled, CartIconContainer } from './NavbarStyles'
+import { LinksContainerStyled, NavbarContainerStyled, LoginContainerStyled, MenuContainerStyled, OverlayStyled, CartIconContainer, CartBubble } from './NavbarStyles'
 import {AiOutlineUser} from "react-icons/ai"
 import {HiMenu} from 'react-icons/hi'
 import {motion} from "framer-motion";
@@ -34,6 +34,7 @@ const Navbar = () => {
 
           <CartIconContainer>
             <BsCart2 size={24}/>
+            <CartBubble>0</CartBubble>
           </CartIconContainer>
 
         </motion.div>

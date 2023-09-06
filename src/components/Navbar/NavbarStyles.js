@@ -36,6 +36,7 @@ export const CartIconContainer = styled.div`
     justify-content: center;
     cursor: pointer;
     margin-right: 25px;
+    position: relative;
 `
 export const LoginContainerStyled = styled.div`
         display: flex;
@@ -83,4 +84,21 @@ export const OverlayStyled = styled.div`
     backdrop-filter: blur(0.3125rem);
     -webkit-backdrop-filter: blur(0.3125rem);
     display:  ${props => (props.showmenu || props.showCart) ? "flex" : "none"};
+`
+
+export const CartBubble = styled.div`
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    text-align: center;
+    background: var(--secondary-color);
+    color: var(--font-color);
+    font-size: 0.625rem;
+    font-weight: 600;
+    height: 1.125rem;
+    width: 1.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 `

@@ -1,9 +1,14 @@
 import React from 'react'
 import { ProductCardStyled, RateContainerStyled, DataContainerStyled, PurchaseContainerStyled, AddToCartBtnStyled, BtnContainerStyled } from './ProductCardStyles'
 import {BsCart2} from "react-icons/bs"
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../../../redux/cart/cartSlice'
 
-const ProductCard = ({name, artist, genre, year, rating, price, img}) => {
-  return (
+const ProductCard = ({name, artist, genre, year, rating, price, img, id}) => {
+
+    const dispatch = useDispatch();
+
+    return (
     <ProductCardStyled>
         <RateContainerStyled>{rating}</RateContainerStyled>
         <img src={img} alt={name} />
@@ -17,7 +22,7 @@ const ProductCard = ({name, artist, genre, year, rating, price, img}) => {
             <p>${price}</p>
 
             <BtnContainerStyled>
-                <AddToCartBtnStyled>
+                <AddToCartBtnStyled onClick={() => dispatch(addToCart({name, artist, genre, year, rating, price, img, id}))}>
                     Agregar
                     <BsCart2 size={12}/>
                 </AddToCartBtnStyled>
