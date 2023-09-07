@@ -27,6 +27,10 @@ export const ProductImgContainerStyled= styled.div`
     & img{
         width: 100%;
     }
+
+    @media (max-width: 450px){
+        display: none;
+    }
 `
 
 export const ProductInfoStyled = styled.div`
@@ -78,6 +82,9 @@ export const QuantityHandlerStyled = styled.span`
     padding: 0.25rem 0.5rem;
     border: 1px solid var(--font-color);
     border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover{
         border: 1px solid var(--primary-color);

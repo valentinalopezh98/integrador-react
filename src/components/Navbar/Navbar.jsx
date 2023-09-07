@@ -11,9 +11,12 @@ import {useContext} from 'react'
 import { Contexto } from '../../context/context'
 import { Link } from 'react-router-dom';
 import { Cart } from '../Cart/Cart';
+import { useSelector } from 'react-redux';
 
 
 const Navbar = () => {
+
+  const totalItems = useSelector(state => state.cart.totalItems)
 
   const {contextState, toggleMenu, toggleCart, toggleOverlay} = useContext(Contexto);
 
@@ -34,7 +37,7 @@ const Navbar = () => {
 
           <CartIconContainer>
             <BsCart2 size={24}/>
-            <CartBubble>0</CartBubble>
+            <CartBubble>{totalItems}</CartBubble>
           </CartIconContainer>
 
         </motion.div>
@@ -58,7 +61,7 @@ const Navbar = () => {
 
       <Cart/>
       <Menu/>
-      <OverlayStyled showmenu={contextState.showMenu} onClick={toggleOverlay} showCart={contextState.showCart}/>
+      <OverlayStyled showmenu={contextState.showmenu} onClick={toggleOverlay} showcart={contextState.showcart}/>
     </NavbarContainerStyled> 
   )
 }

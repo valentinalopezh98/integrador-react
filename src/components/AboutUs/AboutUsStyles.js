@@ -29,6 +29,7 @@ export const AboutUsTextContainerStyled = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        max-width: 1400px;
         gap: 40px;
 
         &div{

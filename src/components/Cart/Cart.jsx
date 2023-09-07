@@ -4,27 +4,54 @@ import { useContext } from 'react';
 import { Contexto } from '../../context/context'
 import {Button} from '../UI/Button/Button'
 import { CartItem } from './CartItem';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearCart, finalizarCompra } from '../../redux/cart/cartSlice';
+import { Modal } from '../Modal/Modal';
 
 export const Cart = () => {
 
+    const dispatch = useDispatch();
+
+    const {cartItems, shippingCost} = useSelector(state => state.cart)
+
     const {contextState} = useContext(Contexto);
 
-    return (
-        <CartWrapperStyled showCart={contextState.showCart}>
+    const totalPrice = cartItems.reduce((acc, item) => {
+        return (acc += item.price * item.quantity)
+    }, 0)
+
+    return <>
+        <CartWrapperStyled showcart={contextState.showcart}>
                 <h3>Tus discos</h3>
 
-                <CartItem></CartItem>
+                {
+                    cartItems.length ? (
+                        cartItems.map((item) => {
+                            return <CartItem key={item.id} {...item}/>
+                        })
+                    ) : (
+                        <p>No hay productos en el carirto</p>
+                    )
+                }
 
                 <DividerStyled/>
 
                 <CartTotal>
                     <p>Total:</p>
-                    <span>$5678</span>
+                    <span>${totalPrice}</span>
                 </CartTotal>
 
-                <Button>Comprar</Button>
+                <Button
+                    onClick={() => dispatch(finalizarCompra())}
+                     disabled={cartItems.length === 0}
+                >Comprar</Button>
 
-                <ButtonDeleteStyled>Vaciar carrito</ButtonDeleteStyled>
+                <ButtonDeleteStyled 
+                    onClick={() => dispatch(clearCart())}
+                    disabled={cartItems.length === 0}
+                    >Vaciar carrito</ButtonDeleteStyled>
         </CartWrapperStyled>
-  )
+
+        <Modal/>
+    </>
 }

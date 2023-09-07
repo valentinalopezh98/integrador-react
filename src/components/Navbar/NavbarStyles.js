@@ -83,7 +83,7 @@ export const OverlayStyled = styled.div`
     box-shadow: 0 0.5rem 2rem 0 rgba(1, 2, 5, 0.37);
     backdrop-filter: blur(0.3125rem);
     -webkit-backdrop-filter: blur(0.3125rem);
-    display:  ${props => (props.showmenu || props.showCart) ? "flex" : "none"};
+    display:  ${props => (props.showmenu || props.showcart) ? "flex" : "none"};
 `
 
 export const CartBubble = styled.div`

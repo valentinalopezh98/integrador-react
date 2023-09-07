@@ -6,36 +6,38 @@ export const Contexto = createContext();
 export const ContextoProvider = ({children}) => {
 
     const INITIAL_STATE = {
-        showMenu: false,
-        showCart: false
+        showmenu: false,
+        showcart: false
     }
     const [contextState, setContextState] = useState(INITIAL_STATE);
 
     const toggleMenu = () => {
         setContextState(prevState => ({
             ...prevState,
-            showMenu: !prevState.showMenu
+            showmenu: !prevState.showmenu,
+            showcart: false
         }));
     }
 
     const toggleCart = () => {
         setContextState(prevState => ({
           ...prevState,
-          showCart: !prevState.showCart
+          showcart: !prevState.showcart,
+          showmenu: false
         }));
       };
 
     const toggleOverlay = () => {
-        if (contextState.showCart){
+        if (contextState.showcart){
             setContextState(prevState => ({
                 ...prevState,
-                showCart: false
+                showcart: false
             }))
         }
-        if (contextState.showMenu){
+        if (contextState.showmenu){
             setContextState(prevState => ({
                 ...prevState,
-                showMenu: false
+                showmenu: false
             }))
         }
     }

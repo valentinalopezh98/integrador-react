@@ -29,12 +29,12 @@ export const CartWrapperStyled = styled.div`
     padding: 50px 30px;
     background-color: var(--bg-color);
     color: var(--font-color);
-    display: ${props => props.showCart ? "flex" : "none"};
+    display: ${props => props.showcart ? "flex" : "none"};
     flex-direction: column;
     align-items: center;
     gap: 30px;
     overflow-y: scroll;
-    animation: fade 0.5s ease-in, ${props => props.showCart ? "slide-left 0.7s ease-in" : "slide-right 0.7s ease-out"} ;
+    animation: fade 0.5s ease-in, ${props => props.showcart ? "slide-left 0.7s ease-in" : "slide-right 0.7s ease-out"} ;
 
     &::-webkit-scrollbar {
     width: 0px;
@@ -42,7 +42,8 @@ export const CartWrapperStyled = styled.div`
     }
 
     @media (max-width: 768px){
-        width: 70%;
+        width: 100%;
+        padding: 50px 20px;
     }
 `
 
@@ -60,6 +61,7 @@ export const CartTotal = styled.div`
 `
 
 export const ButtonDeleteStyled = styled.button`
+    display: ${props => props.disabled ? "none" : "flex"};
     margin-top: 0.625rem;
     border: none;
     background-color: var(--bg-color);

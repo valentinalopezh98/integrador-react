@@ -8,7 +8,7 @@ export const Menu = () => {
     const {contextState} = useContext(Contexto);
 
     return (
-        <MenuWrapperStyled showmenu={contextState.showMenu}>
+        <MenuWrapperStyled showmenu={contextState.showmenu}>
             <LinksContainerStyled>
             <ul>
                 <li><a href="#">Inicio</a></li>

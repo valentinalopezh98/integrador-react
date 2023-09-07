@@ -30,6 +30,7 @@ export const AboutUsBackgroundContainerStyled = styled.section`
 export const AboutUsTextContainerStyled = styled.div`
         margin-top: 50px;
         width: 100%;
+        max-width: 1400px;
         display: flex;
         align-items: center;
         justify-content: center;
