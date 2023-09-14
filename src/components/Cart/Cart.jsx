@@ -30,7 +30,7 @@ export const Cart = () => {
                             return <CartItem key={item.id} {...item}/>
                         })
                     ) : (
-                        <p>No hay productos en el carirto</p>
+                        <p>El carrito está vacío</p>
                     )
                 }
 
