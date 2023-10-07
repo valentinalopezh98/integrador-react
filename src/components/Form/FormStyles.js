@@ -6,18 +6,6 @@ export const FormContainer = styled.form`
     gap: 1.25rem;
     width: 100%;
 
-    & input{
-        width: 100%;
-        height: 2.1875rem;
-        padding-left: 0.3125rem;
-        font-family: 'Roboto Mono', monospace;
-    }
-
-    & textarea{
-        height: 4.375rem;
-        padding: 0.3125rem;
-    }
-
     & .btn{
         display: flex;
         align-items: center;

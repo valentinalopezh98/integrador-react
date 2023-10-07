@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { ModalStyled } from './ModalStyled'
 import { useDispatch, useSelector } from 'react-redux'
 import { hideModal } from '../../redux/cart/cartSlice'

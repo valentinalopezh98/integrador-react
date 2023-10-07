@@ -2,6 +2,7 @@ import React from 'react'
 import { LinksContainerStyled, MenuWrapperStyled } from './MenuStyles'
 import { useContext } from 'react';
 import { Contexto } from '../../context/context'
+import { NavLink } from 'react-router-dom'
 
 export const Menu = () => {
 
@@ -11,10 +12,10 @@ export const Menu = () => {
         <MenuWrapperStyled showmenu={contextState.showmenu}>
             <LinksContainerStyled>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><NavLink to='/'>Inicio</NavLink></li>
+                <li><NavLink to='nosotros'>Nosotros</NavLink></li>
+                <li><NavLink to='productos'>Productos</NavLink></li>
+                <li><NavLink to='contacto'>Contacto</NavLink></li>
             </ul>
             </LinksContainerStyled>
         </MenuWrapperStyled>
